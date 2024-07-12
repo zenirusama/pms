@@ -1,8 +1,8 @@
 import express, { Request, Response } from 'express';
-import { userModel } from 'models/user';
+import { userModel } from '../models/user';
 const router = express.Router();
 
-router.get('seed/:secret', async (req: Request<{ secret: string }>, res: Response) => {
+router.get('/seed/:secret', async (req: Request<{ secret: string }>, res: Response) => {
     try {
         const secret = req.params.secret
         if (secret === "spm123@") {
